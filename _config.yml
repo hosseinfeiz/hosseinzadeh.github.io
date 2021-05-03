@@ -1,127 +1,158 @@
 # --- General options --- #
 
-# Name of website
-title: Anudit Verma
+# url is the full website URL
+# baseurl is the website's URL without the hostname
 
-# Short description of your site
-description: Let me introduce you to my geek side!
-
-# Your name to show in the footer
-author: Anudit Verma
-
-# --- Local development options ---
-# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
-# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
-
-# url is the the website domain URL without a trailing slash
-url: "https://hosseinzadeh.ca/"
-
-# baseurl should be an empty string
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+url: "http://hosseinfeiz.com"
 baseurl: ""
 
-#For my changes
-# use meta-title: for the center heading of the page.
-# use title: to set the <title> of the web page.
-# use subtitle: to set the sub heading for that title(meta-title). NOTE: if(meta-title exists){subtilel visiblity = true}
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
+
+# Of course don't forget to change the username and projectname to YOUR username and project
+
+# Name of website
+title: hosseinfeiz.com
+
+# Short description of your site
+description: "My personal Website for sharing my thoughts and works with rest of the world."
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  Recommends: "books"
-  Publications:
-    - A framework of smart homes connected devices using Internet of Things: "http://ieeexplore.ieee.org/document/7918794/"
-    - Google Scholar Profile: "https://scholar.google.co.in/citations?user=4p4smu0AAAAJ"
-    - ResearchGate Profile: "https://www.researchgate.net/profile/Anudit_Verma"
-  Projects:
-    - GSoC'15: "https://github.com/anuditverma/org.civicrm.osdi"
-    - Airtel Suvidha (Airtel WHack Hackathon): "https://www.linkedin.com/feed/update/activity:6273369896978087936/"
-    - Contract Reader Tool (EY Hackathon): "https://www.moneycontrol.com/news/technology/ey-hackathon-winners-develop-tax-compliance-solutions-with-automation-2439821.html"
-    - Medical Ambience App: "https://github.com/anuditverma/MAA-Avaya-Hackathon"
-    - TypeRacer: "https://github.com/anuditverma/appbase-typeracer"
-    - video.js Overlay Hyperlink: "https://www.npmjs.com/package/videojs-overlay-hyperlink"
-  About Me: "aboutme"
-  Resume | CV: "resume/Anudit_Verma.pdf"
-#  Tags: "tags"
+  Blog:
+    - Posts: "blog"
+    - Tags: "tags"
+  Resources:
+    - Python: "python-resources"
+    - CV: "./assets/cv.pdf"
+  About:
+    - Me: "aboutme"
+    - This Blog: "aboutthisblog"
+
+
+# --- Google custom search config --- #
+# search page name search -> /seach.md
+nav-search: "search"
+# google-site-verification
+#google-site-verification: ''
+
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/av.jpg"
-round-avatar: true
+avatar: "/img/avatar-icon.jpeg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
-# then specify the following parameter. The logo will have a height of 40px
-# title-img: /path/to/image
+# then specify the following parameter
+#title-img: "/img/avatar-icon.png"
 
 # --- Background colour/image options --- #
 
-# By default, the navigation bar and footer have a light gray background, and the main page
-# has a white background. You can specify a different background colour or a background image
-# for the navigation bar, the main page, and the footer.
-# navbar-col: "orange"
-# navbar-img: "/assets/img/bgimage.png"
-# footer-col: "blue"
-# footer-img: "/assets/img/bgimage.png"
-# page-col: "#FF0000"
-# page-img: "/assets/img/bgimage.png"
+# Personalize the colors in your website. Colour values can be any valid CSS colour
+
+navbar-col: "#F5F5F5"
+navbar-text-col: "#404040"
+navbar-children-col: "#F5F5F5"
+page-col: "#FFFFFF"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#F5F5F5"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+
+# Alternatively, the navbar, footer, and page background can be set to use background images
+# instead of colour
+
+navbar-img: "/img/concrete-texture.png"
+footer-img: "/img/concrete-texture.png"
+# page-img: "/img/bgimage.png"
 
 # --- Footer options --- #
 
-# Select the social network links that you want to show in the footer.
-# Uncomment the links you want to show and add your information to each one.
-# If you don't want to show a link to an RSS feed, set rss to "false".
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Hosseinfeiz
+
+# Select your active Social Network Links.
+# Uncomment the links you want to show in the footer and add your information to each link.
+# You can reorder the items to define the link order.
+# If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-# email: "someone@example.com"
-  facebook: anuditverma
-  github: anuditverma
-  twitter: anuditverma
-# reddit: yourname
-  linkedin: anuditverma
-# xing: yourname
-# stackoverflow: 4590331/anudit-verma
-# snapchat: yourname
-  instagram: anuditverma
-  rss: false
-# youtube: user/yourname
-# spotify: yourname
-# telephone: +1-(000)-000-0000
-# steam: yourname
-# twitch: yourname
-# yelp: yourname
-# telegram: yourname
-# calendly: yourname
-# mastodon: instance.url/@username
-# ORCID: 0000-0002-1867-9344
-# google-scholar: citations?user=4p4smu0AAAAJ
+  github: hosseinfeiz
+  stackoverflow: "7080515/hossein-f-a-zadeh"
+  twitter: hosseinkho
+  email: "hfa.zadeh.k@gmail.com"
+  linkedin: hossein-feiz-28514655
+  rss: true
+#  facebook: daattali
+#  reddit: yourname
+#  google-plus: +DeanAttali
+#  xing: yourname
+#  snapchat: deanat78
+#  instagram: deanat78
+#  youtube: user/deanat78
+#  spotify: yourname
+#  telephone: +14159998888
+#  steam: deanat78
+#  twitch: yourname
+#  yelp: yourname
 
 # Select which share links to show in posts
 share-links-active:
   twitter: true
   facebook: true
+  google: false
   linkedin: true
-  vk: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "anudit.in"
+#url-pretty: "OCram85.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-84991519-1"
+#google_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+#gtm: "GTM-TKDTDKW"
 
-# --- Comments --- #
-
-# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: "anuditverma"
-
-# To use Facebook Comments, fill in a Facebook App ID
-# fb_comment_id: ""
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
 
 # --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+#disqus: ""
+
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
+
+matomo:
+  site_id: "1"
+  uri: "matomo.beaver-net.ovh"
+  opt-out: true
+
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+#disqus: ""
+
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
+
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
+
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+#disqus: ""
 
 # Facebook App ID
 # fb_app_id: ""
@@ -134,17 +165,19 @@ excerpt_length: 50
 # and RSS feed title
 title-separator: "-"
 
-# Ruby Date Format
-date_format: "%B %-d, %Y"
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+disqus: "hosseinfeiz"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "Asia/Kolkata"
+timezone: "Europe/Italy"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
+paginate_path: "/blog/page:num/"
 
 kramdown:
   input: GFM
@@ -159,13 +192,12 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-      readtime: true # add estimated reading time on all blog posts
   -
     scope:
       path: "" # all files
     values:
       layout: "page"
-      show-avatar: true
+      show-avatar: false
 
 # Use tags index page and make tags on each post clickable
 link-tags: true
@@ -180,46 +212,16 @@ exclude:
   - LICENSE
   - README.md
   - Vagrantfile
+  - appveyor.yml
+  - tools/
 
-#Meta data for your Posts
-metadata:
-  _posts:
-    - name: "layout"
-      field:
-        element: "hidden"
-        value: "post"
-    - name: "title"
-      field:
-        element: "text"
-        label: "Post title"
-        placeholder: "Title"
-        alterable: true
-    - name: "subtitle"
-      field:
-        element: "textarea"
-        label: "Subtitle"
-        placeholder: "A description of your post."
-        alterable: true
-    - name: "date"
-      field:
-        element: "text"
-        label: "Date"
-        help: "Enter date of post."
-        placeholder: "yyyy-mm-dd"
-        alterable: true
-    - name: "image"
-      field:
-        element: "text"
-        label: "Image"
-        help: "Add a thumbnail image to your post."
-        placeholder: "Thumbnail"
-        alterable: true
-    - name: "published"
-      field:
-        element: "checkbox"
-        label: "Publish"
-        help: "Check to publish post, uncheck to hide."
+gist:
+  noscript: false
 
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
