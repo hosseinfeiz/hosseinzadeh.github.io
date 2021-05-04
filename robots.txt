@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://hosseinfeiz.com/sitemap.xml
+Sitemap: https://hosseinzadeh.ca/sitemap.xml
