@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>hosseinfeiz.com - Useful Commands in Bash and Git </title>
+
+  <meta name="author" content="Hosseinfeiz" />
+
+  
+  <meta name="description" content="Environment Variables In Scheduled Tasks">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="hosseinfeiz.com - My personal Website for sharing my thoughts and works with rest of the world." href="/feed.xml" />
+
+  
+
+  
+
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/fonts.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/fontawesome470/css/font-awesome.min.css" />
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Useful Commands in Bash and Git " />
+  
+
+   
+  <meta property="og:description" content="Environment Variables In Scheduled Tasks">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2020-05-01-Bash/" />
+  <link rel="canonical" href="http://localhost:4000/2020-05-01-Bash/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/image/tdt1.jpg" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Useful Commands in Bash and Git " />
+  
+
+  
+  <meta name="twitter:description" content="Environment Variables In Scheduled Tasks">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/image/tdt1.jpg" />
+  
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+          "background": "#eeeeee",
+          "text": "#646464"
+        },
+        "button": {
+          "background": "transparent",
+          "border": "#646464",
+          "text": "#646464"
+        }
+      },
+  "content": {
+    "message": "This website uses cookies to ensure you get the best experience on our website. By using our site you agree the use of cookies.",
+    "href": "http://localhost:4000/datenschutz#cookies-und-widerspruchsrecht-bei-direktwerbung"
+  }
+})});
+</script>
+
+
+  
+  
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//matomo.beaver-net.ovh/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Piwik Code -->
+
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">hosseinfeiz.com</a>
+        
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+        <li class="navlinks-container">
+          <a class="navlinks-parent" href="javascript:void(0)">Blog</a>
+          <div class="navlinks-children">
+            
+              
+              
+            
+
+
+
+
+
+<a href="/blog">Posts</a>
+
+              
+            
+              
+              
+            
+
+
+
+
+
+<a href="/tags">Tags</a>
+
+              
+            
+          </div>
+        </li>
+         
+          
+        <li class="navlinks-container">
+          <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+          <div class="navlinks-children">
+            
+              
+              
+            
+
+
+
+
+
+<a href="/python-resources">Python</a>
+
+              
+            
+              
+              
+            
+
+
+
+
+
+<a href="/./assets/cv.pdf">CV</a>
+
+              
+            
+          </div>
+        </li>
+         
+          
+        <li class="navlinks-container">
+          <a class="navlinks-parent" href="javascript:void(0)">About</a>
+          <div class="navlinks-children">
+            
+              
+              
+            
+
+
+
+
+
+<a href="/aboutme">Me</a>
+
+              
+            
+              
+              
+            
+
+
+
+
+
+<a href="/aboutthisblog">This Blog</a>
+
+              
+            
+          </div>
+        </li>
+         
+
+        
+        <li>
+          <a href="/search" class="nav-search-link" title="Search">
+              <span class="fa fa-search nav-search-icon"></span>
+            </a>
+        </li>
+        
+      </ul>
+    </div>
+
+  
+  <div class="avatar-container">
+    <div class="avatar-img-border">
+      <a href="http://localhost:4000">
+        <img class="avatar-img" src="/img/image/tdt1.jpg" />
+    </a>
+    </div>
+  </div>
+  
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+	  
+	  
+	    
+		  data-img-src-1="/img/bigimg/tdt_back.png"
+		
+	  
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Useful Commands in Bash and Git </h1>
+		  
+		    
+			<h2 class="post-subheading">Environment Variables In Scheduled Tasks</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on May 1, 2020</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Useful Commands in Bash and Git </h1>
+		  
+		    
+			<h2 class="post-subheading">Environment Variables In Scheduled Tasks</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on May 1, 2020</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <div class="about-container">
+    <div class="about-container-header" data-toggle="collapse" data-target="#aboutcontent" title="Display a summary about this page.">
+        <p class="about-container-heading about-font-default">
+            <i class="fa fa-paperclip about-font-out" aria-hidden="true"></i>
+            <span class="about-prompt">
+                ~&gt;
+            </span>
+            <span class="about-font-cmd">
+                Get-Help
+            </span>
+            -Name
+            <span class="about-font-string">
+                    'About_UsefulCommandsinBashandGit'</span>
+        </p>
+    </div>
+    <div class="about-container-content  collapse" id="aboutcontent">
+        <p class="about-font-out">
+            
+                This post covers a short story about why you shouldn't use profile related environment vars in scripts. Especially if you need to run them as scheduled tasks.
+            
+            <span class="blinking-cursor">|</span>
+        </p></div>
+</div>
+
+<h2 id="the-scenario">The Scenario</h2>
+<p>I recently worked on a controller script to synchronize new active directory users with a two-factor authentication
+solution. The controller script itself calls different functions from preexisting modules. It is triggered by the
+windows task scheduler on its dedicated job server.</p>
+
+<p>The described scenario worked for about a year but suddenly the responsible sysop reported a problem:</p>
+
+<blockquote>
+  <p><strong>SysOp:</strong> “Hi Marco, We’ve got a problem with your 2FA Sync tool. I didn’t change anything but it stopped working
+this morning. Could you take a look at it?”</p>
+
+  <p><strong>Me:</strong> “Sure. But what do you mean exactly with <strong>it stopped working</strong>? Did you get an error message in the
+powershell console or an corresponding eventlog entry?”</p>
+
+  <p><strong>SysOp:</strong> “Well, I didn’t get the daily reports and the needed files were not created.”</p>
+
+  <p><strong>Me:</strong> “Ok.Just give me a couple of minutes. It shouldn’t be a big problem!”</p>
+</blockquote>
+
+<p class="box-note"><em>… And that was truly my assumption. It turned out I would search for a solution the whole day.</em></p>
+
+<h2 id="analysis">Analysis</h2>
+
+<h3 id="manual-execution">Manual Execution</h3>
+
+<p>So first things first. I checked if someone broke the dependencies with the modules and tried to run the script
+itself.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">~&gt;</span><span class="w"> </span><span class="nb">cd </span>C:<span class="se">\S</span>cripts<span class="se">\2</span>FA
+<span class="gp">~&gt;</span><span class="w"> </span>.<span class="se">\I</span>nvoke-2FAUserSync.ps1 <span class="nt">-MailDest</span> <span class="s1">'marco.blessing@gmail.com'</span> <span class="nt">-WhatIf</span> <span class="nt">-Debug</span> <span class="nt">-Verbose</span>
+</code></pre></div></div>
+<p><img src="/img/posts/2FAConsoleRun.jpg" alt="Console Run Result" /></p>
+
+<p>Ok it works. There are some user related warnings, but it doesn’t matter right now.</p>
+
+<h3 id="execute-it-like-a-scheduled-tasks">Execute it like a scheduled tasks</h3>
+
+<p>Next step is to check if the the scheduled task itself is able to call it. Therefore I take the command itself form
+the task and try to run it. Either form the <em>Start-&gt;Run</em> window or the <em>command shell</em></p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command "&amp;{C:\Scripts\2FA\Invoke-2FAUserSync.ps1 -MailDest 'marco.blessing@gmail.com' -WhatIf}"
+</span></code></pre></div></div>
+
+<p>This returned the same results like in first run in the powershell console. Thats great. Up to now it means, there
+is no major problem with the script itself and the execution command string with its arguments is correct.</p>
+
+<h3 id="run-as-scheduled-task">Run as scheduled task</h3>
+
+<p>So lets finally run the task itself -&gt; That’s strange - It works as well. I expected it to fail like the Sysop
+colleague said.</p>
+
+<h3 id="run-the-scheduled-task-triggered-by-time-event">Run the scheduled task triggered by time event</h3>
+
+<p>Let’s schedule the task to run it once in 5 minutes up to now. -&gt; Well, it worked again, and again, and again.
+So I called my colleague and told him I can’t reproduce the error and it seems to work again. I scheduled the
+task as usual to run every morning 5 am and logged off.</p>
+
+<p>The next morning came - The same problem occurred. So I repeated every test again and tried it at least 10 times.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>Later this day someone forgot accidentally to log off with the service account and I could reproduce it:
+If the task gets triggered while the service account was logged in or locked, it runs without any problems. But if
+someone logs off the service account, like you normally would after you finished your work remotely, it fails.</p>
+
+<p>So I continued inspecting the task and double checked the task details. But it didn’t work either.</p>
+
+<p>I stumbled upon a post from the <a href="http://ramblingcookiemonster.github.io/Task-Scheduler/">Rambling Cookie Monster</a>.
+While reading the article started wondering if I used any types or assemblies which doesn’t work in the non
+interactive mode. This would explain why i ran in a user context while the service account is logged in. So I
+checked the scripts again and even the other modules which I used.</p>
+
+<p>However, there are two things I’m wondering about:</p>
+
+<ul>
+  <li>How could it be, that this script runs for about a year now an nobody noticed the problem earlier?
+This means basically no one logged of the service account for about a year.</li>
+  <li>And second: No one tested it correctly before it is used in a production environment!</li>
+</ul>
+
+<h2 id="the-cause">The Cause</h2>
+<p>What if the environment variables I’m using is causing this? - So I decided to create an other scheduled task which
+writes all the variable values into a temp file. Afterwards it should be easy to compare the values.</p>
+
+<p>The scheduled tasks looks like this:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Run
+<span class="go">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+</span><span class="gp">#</span><span class="w"> </span>Args
+<span class="go">-NoLogo -NonInteractive -NoProfile -Command "&amp;{
+</span><span class="gp">    Get-Date | Out-File 'C:\vars.txt' -Encoding utf8 -Force -Append;</span><span class="w">
+</span><span class="go">    Get-ChildItem Env: | Out-File 'C:\vars.txt' -Encoding utf8 -Force -Append
+}"
+</span></code></pre></div></div>
+
+<p>And now we can compare the results. I ran task while the service account was locked and logged off</p>
+
+<p><strong>With service account locked</strong>
+<img src="/img/posts/stask1.png" alt="With locked user" /></p>
+
+<p><strong>With service account logged off</strong>
+<img src="/img/posts/stask2.png" alt="With locked user" /></p>
+
+<p>Do you notice the highlighted variable called <code class="language-plaintext highlighter-rouge">APPDATA</code>? - It’s missing while the service account is logged off!
+And that’s the problem. The controller script uses a credential manager which tries to read a credential store in
+the user profile.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>The solution here is to change the credential store location to <code class="language-plaintext highlighter-rouge">ProgramData</code> which exists in both scenarios.</p>
+
+<h2 id="final-conclusion">Final Conclusion</h2>
+
+<p>If there is one thing I’ve learned form this: Choose environment variables wisely. You never know how your function
+will be used in the future. Especially when you decided using profile related environment variables :D</p>
+
+<p>Did you experience a similar situation? - Let me know…</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#The Debugger Tales">The Debugger Tales</a>
+          
+            <a href="/tags#Scheduled Tasks">Scheduled Tasks</a>
+          
+            <a href="/tags#Environment Vars">Environment Vars</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Useful+Commands+in+Bash+and+Git++http://localhost:4000/2020-05-01-Bash/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2020-05-01-Bash/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2020-05-01-Bash/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2020-04-07-PageSummary/" data-toggle="tooltip" data-placement="top" title="What is the best way to learn Pytorch?">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'hosseinfeiz';
+        /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="https://github.com/hosseinfeiz" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://stackoverflow.com/users/7080515/hossein-f-a-zadeh" title="StackOverflow"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">StackOverflow</span>
+              </a>
+            </li><li><a href="https://twitter.com/hosseinkho" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li><li><a href="mailto:hfa.zadeh.k@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://linkedin.com/in/hossein-feiz-28514655" title="LinkedIn"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+            </li><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Hosseinfeiz
+      &nbsp;&bull;&nbsp;
+      <span data-toggle="tooltip" title="Last build: 2021-05-03 23:28">2021</span>
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="/sitemap"> Sitemap </a>
+
+      
+        
+          &nbsp;&bull;&nbsp;
+          <a href="http://matomo.beaver-net.ovh/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+        
+      
+      </p>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-3.3.1.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+
+
+  </body>
+</html>
