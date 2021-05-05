@@ -1,11 +1,10 @@
 ---
 layout: page
-
+permalink: "Pytorch-resources"
 title: A Journey to Pytorch 
 subtitle: All important resources you need to know.
-permalink: "Pytorch-resources"
-excerpt: "This page represents my favorite list of Pytorch resources. 
-Pytorch is the first python based Deep Learning(DL) package and years to come it will dominate the deep learning project. (currently 80% of new papers in arxiv use Pytorch as their DL package)
+# excerpt: "This page represents my favorite list of Pytorch resources. 
+# Pytorch is the first python based Deep Learning(DL) package and years to come it will dominate the deep learning project. (currently 80% of new papers in arxiv use Pytorch as their DL package)
 image: "/img/image/ps-journey.jpg"
 show-avatar: true
 bigimg:	# /path/to/img - or multiple entries <- "Path": "Description">
