@@ -14,10 +14,20 @@ googlefonts: ["Share+Tech+Mono"]
 I often start writing a post or page and end up with much more content than I thought at the beginning.
 So I started adding a little summary section like this:
 
-```powershell
-{: .text-muted}
-As mentioned earlier, I will post powershell and automation related stuff here. I've already started
-thinking about the following posts.
+```python
+def gen_pose(kpts, valid_frames, width, height, model_pos, pad, causal_shift=0):
+    assert len(kpts.shape) == 4, 'The shape of kpts: {}'.format(kpts.shape)
+    assert kpts.shape[0] == len(valid_frames)
+
+    norm_seqs = []
+    for index, frames in enumerate(valid_frames):
+        seq_kps = kpts[index, frames]
+        norm_seq_kps = normalize_screen_coordinates(seq_kps, w=width, h=height)
+        norm_seqs.append(norm_seq_kps)
+
+    gen = UnchunkedGenerator(None, None, norm_seqs, pad=pad, causal_shift=causal_shift, augment=True,
+                             kps_left=kps_left, kps_right=kps_right, joints_left=joints_left, joints_right=joints_right)
+    prediction = evaluate(gen, model_pos)
 ```
 
 ```css
