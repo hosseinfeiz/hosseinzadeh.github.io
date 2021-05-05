@@ -3,8 +3,7 @@ layout: page
 permalink: "aboutme"
 title: About me
 bigimg:
-  - "/img/bigimg/me/1.JPG"   
-  - "/img/bigimg/me/5.JPG"  
+  - "/img/bigimg/me/5.JPG"    
 ---
 
 <i class="fa fa-address-card" aria-hidden="true"></i> Hi, my name is Hossein Feiz and I live in Montreal, Canada.
