@@ -1,87 +1,70 @@
-# About
+## 🧸 YAAPPT: Yet Another Academic Project Page Template
+This is an academic paper project page template, modified from [my homepage](http://vinthony.github.io/) and [this project](https://github.com/eliahuhorwitz/Academic-project-page-template).
 
-This is repository contains the source files of my personal jekyll based blog.
-The theme is based on [beautiful-jekyll](https://github.com/daattali/beautiful-jekyll) by Dean Attali.
-
-❓ **If you like my customization, start with cloning the origin repository by Dean and follow his readme article!**
-
-I contribute to his repository and try to create PRs for all the changes I did. Chances are good that these PRs are already merged...
+Style1:
+![224684243-01f15ea7-bcfa-41d9-95ac-c2c1766f159c](https://user-images.githubusercontent.com/4397546/224684840-eaebd628-c454-46a5-a7a5-611395bb1ac7.png)
 
 
-## ⚠️ Note: github-pages compatibility ⚠️
+Style2:
+![image](https://github.com/vinthony/project-page-template/assets/4397546/3117943f-1ce0-43cc-ba9b-4f7ca20851b4)
 
-I recently had moved away from github-pages for hosting my blog. To fulfill [GDPR](https://eugdpr.org/) I'm now
-hosting the blog on my on. Additionally I removed al external resources and integrated them. I you need more details
-about the changes see [Page And Privacy Updates](https://ocram85.com/2018-10-29-PrivacyUpdate/).
 
-This site is still github-pages compatible!
 
-## :wrench: Custom Build Process :wrench:
+Style1 Demo project is [here](https://vinthony.github.io/project-page-template/)!
 
-If you are interested about my custom build process you can take a look at the [autobuild.sh](./tools/autobuild.sh) script.
-This script is called by a cronjob and starts building the blog if there were new commits on the `master` branch.
+Style2 Demo project is [here](https://vinthony.github.io/project-page-template/style2.html)!
 
-## Page / Post Template
-> My personal template for all available *Front Matter* YAML vars
+Style3 Demo project is [here](https://vinthony.github.io/project-page-template/style3.html)!
 
-```YAML
----
-layout: # page | post (blog) | minimal
-title:	# Page or blog post title
-subtitle: # Short description of page or blog post that goes under the title
-image: # /path/to/img
-show-avatar:  #(false) | true
-bigimg:	# /path/to/img - or multiple entries <- "Path": "Description">
-category: # Powershell
-tags: # [tag1, tag2, tag3]
 
-# ---- Jekyll optional vars ---- #
-# date: # overrides tha tage from the file name YYYY-MM-DD HH:MM:SS
-# permalink: # (default /year/month/day/title.html)
-# published: # (true) | false
 
-# ---- Theme based optional vars ---- #
-# comments: # (false) | true
-# show-avatar: # (true) | false
-# social-share: # If you don't want to show buttons to share a blog post on social media, use social-share: false (this feature is turned on by default).
-# use-site-title: # (false) | true
----
-```
+See also the project page of our recent paper:
 
-## Snippets
+- [SadTalker (CVPR 2023)](https://sadtalker.github.io/)
+- [Video ReTalking (SIGGRAPH Asia 2022, Conference Track)](https://vinthony.github.io/video-retalking/)
 
-### Table of Content
 
-```markdown
-**Content**
+### 📜 Changelog
 
-* TOC Placeholder
-{:toc}
-```
+- 2023-10-20: add style2 with a background video.
+- 2023-03-16: support scoring marquee items
+- 2023-03-13: support the latex formula rendering from MathJax
 
-### Content Summary
-```
-{% include about.html caption="Heading" content="some content"  footer=true readingtime=true %}
-```
 
-#### Vars
+### 💈 Start using the template
+To start using the template click on `Use this Template`.
 
-- **Caption:** Adds a header line.
-  - If not given the page title is used.
-  - If the title has more than 35 chars the default heading `About_ThisPage` is used
-- **Content:** Defines the content of the about box
-  - You can provide a Value with this var or use the `page.excerpt` var.
-- **footer:** enables the footer section in general
-- **readingtime:** Displays an average reading time in the footer section
-- `page.edit`: is used to define your last edit date
-- `site.author.name`: is used to display the author.
+The template uses html to control the content and css to control the style.
+To edit the website contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.
 
-### Notification boxes
+### 🎏 Components
+- Teaser video
+- Images Carousel
+- Youtube embedding
+- Video Carousel
+- PDF Poster
+- Bibtex citation
+- marquee items
 
-Use the following syntax to add the classes to you box section: `{: .box-note}`, `{: .box-warning}` or `{: .box-error}`
+### 🚩 Tips:
 
-You can use font-awesome icons within and set a custom color like this:
+<details><summary>CLICK ME</summary>
 
-{: .box-note}
-<i class="fa fa-commenting icon-blue" aria-hidden="true"></i> **NOTE:** This is Notification class with a colored
-font-awesome icon. Select your color by adding these classes: `icon-blue`, `icon-yellow` or `icon-red`.
+- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
+- The `meta` tags in the `index.html` file are used to provide metadata about your paper
+(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
+- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load.
+- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
+- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
+- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up.
+- This project page can also be made into a github pages website.
+- Replace the favicon to one of your choosing (the default one is of the Hebrew University).
+- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+
+</details>
+
+### 💗 Acknowledgments
+Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page and [eliahuhorwitz/Academic-project-page-template](https://github.com/eliahuhorwitz/Academic-project-page-template).
+
+### ⚖️ Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
